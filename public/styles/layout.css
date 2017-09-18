@@ -4,7 +4,7 @@
  * Do not modify these two selectors, please
  */
 html {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -17,11 +17,19 @@ html {
 body {
   margin: 0;
   color: #244751;
-  background-color: #FFFFFF;
+  background-color: #eee;
   font-family: "Roboto Condensed", sans-serif;
-  padding: 100px;
-  color: #000000;
   font-size: 24px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 450px;
+  margin: auto;
+  background-color: #FFFFFF;
+  padding-top: 100px;
 }
 
 /*
