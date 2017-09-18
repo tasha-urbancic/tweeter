@@ -1,0 +1,17 @@
+#nav-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 0em 2em 0em 2em;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+  background: #00a087;
+  color: #e8fdff;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+}
