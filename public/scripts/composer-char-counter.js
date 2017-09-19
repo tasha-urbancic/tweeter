@@ -2,12 +2,11 @@ $(document).ready(function() {
   const tweetTextElement = $(".new-tweet").find('textarea');
   const characterLengthLimit = 140;
   
-  tweetTextElement.on('keyup', function(event) {
+  tweetTextElement.on('keyup', (event) => {
 
-    let currentCharacterCount = $(this).closest('textarea').val().length;
-    const counterElement = $(this).parent().find('.counter');
-
-    let counterValue = characterLengthLimit - currentCharacterCount;
+    const currentCharacterCount = $(event.target).val().length;
+    const counterElement = $(event.target).parent().find('.counter');
+    const counterValue = characterLengthLimit - currentCharacterCount;
 
     if (counterValue < 0) {
       counterElement.addClass('characterLimitExceeded');
