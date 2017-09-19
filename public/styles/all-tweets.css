@@ -1,0 +1,19 @@
+.all-tweets {
+  margin: auto;
+  margin-bottom: 80px;
+  padding: 1em 1em 1em 1em;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: #eee;
+}
+
+.tweet-centering {
+  margin: auto;
+}
+
+.user-avatar {
+  height: 50px;
+  border-radius: 50%;
+}
+
+
