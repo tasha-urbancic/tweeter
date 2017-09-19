@@ -44,3 +44,7 @@ textarea {
 .tweet-footer {
   padding: 0.25em 0 2em 0;
 }
+
+.characterLimitExceeded {
+  color: red;
+}
