@@ -14,7 +14,7 @@
   background: #eee;
 }
 
-.tweet-header-line {
+.new-tweet-header {
   padding: 1em 0;
 }
 
@@ -22,6 +22,7 @@ h2 {
   margin: 0;
   width: 370px;
   border-bottom: 1px solid rgba(0, 0, 0, 1);
+  font-size: 24px;
 }
 
 textarea {
@@ -30,7 +31,6 @@ textarea {
 }
 
 .tweet-button {
-  /* position: absolute; */
   display: block;
   float: left;
 }
@@ -40,10 +40,7 @@ textarea {
   float: right;
 }
 
-.tweet-footer {
+.new-tweet-footer {
   padding: 0.25em 0 2em 0;
 }
 
-.characterLimitExceeded {
-  color: red;
-}

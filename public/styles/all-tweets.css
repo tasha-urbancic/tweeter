@@ -1,10 +1,9 @@
-.all-tweets {
+.tweet {
   margin: auto;
   margin-bottom: 80px;
-  padding: 1em 1em 1em 1em;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.25);
-  background: #eee;
+  background: #fff;
 }
 
 .tweet-centering {
@@ -14,6 +13,40 @@
 .user-avatar {
   height: 50px;
   border-radius: 50%;
+  display: block;
+  float: left;
+  margin-right: 8px;
 }
 
+.user-name {
+  font-size: 24px;
+  font-weight: bold;
+}
 
+.user-handle {
+  float: right;
+  line-height: 1.5rem;
+  font-size: 16px;
+}
+
+.tweet-header {
+  display: table;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.05);
+  width: 100%;
+  padding: 1em;
+}
+
+.tweet-content {
+  padding: 1em 1em 1em 1em;
+}
+
+.tweet-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 1em 1em 1em 1em;
+}
+
+.tweet-footer > p {
+  margin: 0;
+  font-size: 14px;
+}

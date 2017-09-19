@@ -49,14 +49,13 @@
 
     <div class="tweet-centering">
 
-      <!-- <div class='tweet-padding'> -->
       <section class="new-tweet">
-        <div class="tweet-header-line">
+        <div class="new-tweet-header">
           <h2>Compose Tweet</h2>
         </div>
         <form action="/tweets" method="POST">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <div class="tweet-footer">
+          <div class="new-tweet-footer">
             <div class="tweet-button">
               <input type="submit" name="Tweet" value="Tweet">
             </div>
@@ -66,33 +65,30 @@
           </div>
         </form>
       </section>
-      <!-- </div> -->
 
-      <!-- <div class='tweet-padding'> -->
-      <section class="all-tweets">
-        <article>
+      <article class="tweet">
 
-          <header>
-            <a href="#">
+        <header class='tweet-header'>
+          <a href="#">
                   <img class="user-avatar" src="images/hazelnut.png" alt="hazelnut-the-cat">
             </a>
-            <h1>Hazelnut Urbancic</h1>
-            <div>
+          <a class="user-name" href='#'>
+              Hazelnut Urbancic
+            </a>
+          <a class='user-handle' href='#'>
               @MsQueenOfNuts
-            </div>
-          </header>
+            </a>
+        </header>
 
-          <div class="tweet-content">
-            <p>Nuts for life.</p>
-          </div>
+        <div class="tweet-content">
+          <p>Nuts for life.</p>
+        </div>
 
-          <footer "tweet-footer">
-            10 days ago
-          </footer>
+        <footer class="tweet-footer">
+          <p>10 days ago</p>
+        </footer>
 
-        </article>
-      </section>
-      <!-- </div> -->
+      </article>
 
     </div>
 
