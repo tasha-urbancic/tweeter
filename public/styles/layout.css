@@ -27,7 +27,7 @@ main {
   align-items: center;
   margin: auto;
   width: 450px;
-  height: 1000px;
+  /* height: 1000px; */
   background-color: #FFFFFF;
   padding-top: 100px;
 }
