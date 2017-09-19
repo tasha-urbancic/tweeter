@@ -50,28 +50,28 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
 
-    <div class="tweet-centering">
+    <div class="body-centering">
 
       <section class="new-tweet">
-        <div class="new-tweet-header">
+        <header>
           <h2>Compose Tweet</h2>
-        </div>
+        </header>
         <form action="/tweets" method="POST">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <div class="new-tweet-footer">
+          <footer>
             <div class="tweet-button">
               <input type="submit" name="Tweet" value="Tweet">
             </div>
             <div class="tweet-character-counter">
               <span class="counter">140</span>
             </div>
-          </div>
+          </footer>
         </form>
       </section>
 
       <article class="tweet">
 
-        <header class='tweet-header'>
+        <header>
           <a href="#">
                   <img class="user-avatar" src="images/hazelnut.png" alt="hazelnut-the-cat">
           </a>
@@ -87,18 +87,18 @@
           <p>Nuts for life.</p>
         </div>
 
-        <footer class="tweet-footer">
+        <footer>
           <div class="tweet-timestamp">
             <a href='#'>10 days ago</a>
           </div>
           <div class="tweet-actions">
-            <a class="tweet-action" href="#">
+            <a href="#">
                 <img class="like" src="images/like.png" alt="like">
             </a>
-            <a class="tweet-action" href="#">
+            <a href="#">
                 <img class="flag" src="images/flag.png" alt="flag">
             </a>
-            <a class="tweet-action" href="#">
+            <a href="#">
                 <img class="retweet" src="images/retweet.png" alt="retweet">
             </a>
           </div>

@@ -4,10 +4,18 @@
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.25);
   background: #fff;
+  opacity: 0.8;
 }
 
-.tweet-centering {
-  margin: auto;
+.tweet:hover {
+  opacity: 1;
+}
+
+.tweet header:after,
+.tweet footer:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .user-avatar {
@@ -29,7 +37,7 @@
   font-size: 16px;
 }
 
-.tweet-header {
+.tweet header {
   display: table;
   margin: 0;
   background: rgba(0, 0, 0, 0.05);
@@ -41,14 +49,14 @@
   padding: 1em 1em 1em 1em;
 }
 
-.tweet-footer {
+.tweet footer {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   padding: 1em 1em 1em 1em;
   /* display: table;
   width: 100%; */
 }
 
-.tweet-footer > p {
+.tweet footer > p {
   margin: 0;
   font-size: 14px;
 }
@@ -72,9 +80,4 @@
   height: 20px;
 }
 
-.tweet-header:after,
-.tweet-footer:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+

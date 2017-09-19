@@ -9,9 +9,9 @@ $(document).ready(function() {
     const counterValue = characterLengthLimit - currentCharacterCount;
 
     if (counterValue < 0) {
-      counterElement.css('color', 'red');
+      counterElement.addClass('error');
     } else {
-      counterElement.css('color', 'inherit');
+      counterElement.removeClass('error');
     }
 
     counterElement.text(counterValue);

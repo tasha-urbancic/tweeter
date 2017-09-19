@@ -14,7 +14,7 @@
   background: #eee;
 }
 
-.new-tweet-header {
+.new-tweet header {
   padding: 1em 0;
 }
 
@@ -40,7 +40,7 @@ textarea {
   float: right;
 }
 
-.new-tweet-footer {
+.new-tweet footer {
   padding: 0.25em 0 2em 0;
 }
 
