@@ -44,9 +44,33 @@
 .tweet-footer {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   padding: 1em 1em 1em 1em;
+  /* display: table;
+  width: 100%; */
 }
 
 .tweet-footer > p {
   margin: 0;
   font-size: 14px;
 }
+
+.tweet-timestamp {
+  display: block;
+  float: left;
+}
+
+.tweet-actions {
+  display: block;
+  float: right;
+}
+
+.retweet, .like, .flag {
+  height: 20px;
+}
+
+.tweet-header:after,
+.tweet-footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
