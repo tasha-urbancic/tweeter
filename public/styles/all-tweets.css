@@ -52,8 +52,7 @@
 .tweet footer {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   padding: 1em 1em 1em 1em;
-  /* display: table;
-  width: 100%; */
+  font-size: 0.75em;
 }
 
 .tweet footer > p {
