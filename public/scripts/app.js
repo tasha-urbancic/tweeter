@@ -101,7 +101,15 @@ $(function() {
     },
     newTweetSubmit: function(event) {
       event.preventDefault();
-      $.post("/tweets", $("form").serialize(), handlers.reloadTweets);
+      const tweetText = $("form").serialize();
+
+      if (!handlers.tweetIsEmpty || !handlers.tweetTooLong) {
+        $.post("/tweets", tweetText, handlers.reloadTweets);
+      } else {
+        alert('Tweet needs to be between 1 and 140 characters!')
+        $("form").find('textarea').val('');
+      }
+
     },
     loadTweets: function() {
       $.ajax({
@@ -110,11 +118,29 @@ $(function() {
         dataType: "json",
         success: handlers.renderTweets
       });
+    },
+    tweetIsEmpty: function() {
+      if (tweetText !== "" || tweetText !== null) {
+        return false;
+      } else {
+        return true;
+      }
+    },
+    tweetTooLong: function() {
+      if (tweetText.split("").length <= 140) {
+        return false;
+      } else {
+        return true;
+      }
     }
   };
 
   handlers.loadTweets();
 
-  $(".tweet-button").find("input").on("click", handlers.newTweetSubmit);
-
+  $(".tweet-button")
+    .find("input")
+    .on("click", handlers.newTweetSubmit);
 });
+
+
+
