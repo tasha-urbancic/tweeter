@@ -48,28 +48,36 @@
 
 
   <!-- Page-specific (main) content here -->
-  <main class="container">
+  <main>
 
-    <div id="tweets-container">
+    <div class="centered">
 
-      <section class="new-tweet">
-        <header>
-          <h2>Compose Tweet</h2>
-        </header>
+      <div id="container">
 
-        <form action="/tweets" method="POST">
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <footer>
-            <div class="tweet-button">
-              <input type="submit" name="Tweet" value="Tweet">
-            </div>
-            <div class="tweet-character-counter">
-              <span class="counter">140</span>
-            </div>
-          </footer>
-        </form>
+        <section class="new-tweet">
+          <header>
+            <h2>Compose Tweet</h2>
+          </header>
 
-      </section>
+          <form action="/tweets" method="POST">
+            <textarea name="text" placeholder="What are you humming about?"></textarea>
+            <footer>
+              <div class="tweet-button">
+                <input type="submit" name="Tweet" value="Tweet">
+              </div>
+              <div class="tweet-character-counter">
+                <span class="counter">140</span>
+              </div>
+            </footer>
+          </form>
+
+        </section>
+
+      </div>
+
+      <div id="tweets-container">
+
+      </div>
 
     </div>
 

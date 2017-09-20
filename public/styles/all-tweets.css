@@ -15,9 +15,14 @@
   visibility: hidden;
 }
 
+#tweets-container {
+  /* margin: auto; */
+}
+
 .tweet-content {
   padding: 1em 1em 1em 1em;
 }
+
 
 .tweet footer {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
