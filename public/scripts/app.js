@@ -106,9 +106,7 @@ $(function() {
       if (!handlers.tweetIsEmpty || !handlers.tweetTooLong) {
         $.post("/tweets", tweetText, handlers.reloadTweets);
       } else {
-        alert(
-          "Tweet needs to be between 1 and 140 characters!"
-        );
+        alert("Tweet needs to be between 1 and 140 characters!");
       }
     },
     loadTweets: function() {
@@ -132,20 +130,17 @@ $(function() {
       } else {
         return true;
       }
+    },
+    toggleTweetBox: function() {
+      $("#container").slideToggle(150, function() {
+        $("#container")
+          .find("textarea")
+          .select();
+      });
     }
   };
 
   handlers.loadTweets();
-
-  $(".tweet-button")
-    .find("input")
-    .on("click", handlers.newTweetSubmit);
-
-
-  $( ".compose-button" ).click(function() {
-    $( "#container" ).slideToggle( 150, function() {
-      $('#container').find('textarea').select();
-    });
-  });
-
+  $(".tweet-button input").on("click", handlers.newTweetSubmit);
+  $(".compose-button").on("click", handlers.toggleTweetBox);
 });
