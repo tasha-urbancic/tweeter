@@ -106,10 +106,10 @@ $(function() {
       if (!handlers.tweetIsEmpty || !handlers.tweetTooLong) {
         $.post("/tweets", tweetText, handlers.reloadTweets);
       } else {
-        alert('Tweet needs to be between 1 and 140 characters!')
-        $("form").find('textarea').val('');
+        alert(
+          "Tweet needs to be between 1 and 140 characters!"
+        );
       }
-
     },
     loadTweets: function() {
       $.ajax({
@@ -140,7 +140,12 @@ $(function() {
   $(".tweet-button")
     .find("input")
     .on("click", handlers.newTweetSubmit);
+
+
+  $( ".compose-button" ).click(function() {
+    $( "#container" ).slideToggle( 150, function() {
+      $('#container').find('textarea').select();
+    });
+  });
+
 });
-
-
-
