@@ -5,7 +5,6 @@
  */
 
 function createTweetElement(tweetObject) {
-
   const article = $("<article>").addClass("tweet");
 
   const avatarImage = $("<img>")
