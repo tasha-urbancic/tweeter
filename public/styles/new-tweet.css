@@ -4,6 +4,13 @@
   padding-bottom: 23px;
 }
 
+h2 {
+  margin: 0;
+  width: 370px;
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+  font-size: 24px;
+}
+
 .new-tweet {
   margin: auto;
   margin-top: 30px;
@@ -14,15 +21,17 @@
   background: #eee;
 }
 
-.new-tweet header {
-  padding: 1em 0;
+.new-tweet footer {
+  padding: 0.25em 0 0.5em 0;
+  font-size: 0.75em;
+  display: flex;
+  align-items: center;
 }
 
-h2 {
-  margin: 0;
-  width: 370px;
-  border-bottom: 1px solid rgba(0, 0, 0, 1);
-  font-size: 24px;
+.new-tweet header {
+  padding: 1em 0;
+  display: flex;
+  align-items: flex-start;
 }
 
 textarea {
@@ -31,17 +40,8 @@ textarea {
 }
 
 .tweet-button {
-  display: block;
-  float: left;
+  flex-grow: 1;
 }
 
-.tweet-character-counter {
-  display: block;
-  float: right;
-}
 
-.new-tweet footer {
-  padding: 0.25em 0 2em 0;
-  font-size: 0.75em;
-}
 

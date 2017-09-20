@@ -1,3 +1,7 @@
+.retweet, .like, .flag {
+  height: 20px;
+}
+
 .tweet {
   margin: auto;
   margin-bottom: 80px;
@@ -7,42 +11,8 @@
   opacity: 0.8;
 }
 
-.tweet:hover {
-  opacity: 1;
-}
-
-.tweet header:after,
-.tweet footer:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.user-avatar {
-  height: 50px;
-  border-radius: 50%;
-  display: block;
-  float: left;
-  margin-right: 8px;
-}
-
-.user-name {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.user-handle {
-  float: right;
-  line-height: 1.5rem;
-  font-size: 16px;
-}
-
-.tweet header {
-  display: table;
-  margin: 0;
-  background: rgba(0, 0, 0, 0.05);
-  width: 100%;
-  padding: 1em;
+.tweet-actions {
+  visibility: hidden;
 }
 
 .tweet-content {
@@ -53,6 +23,8 @@
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   padding: 1em 1em 1em 1em;
   font-size: 0.75em;
+  display: flex;
+  align-items: center;
 }
 
 .tweet footer > p {
@@ -60,23 +32,47 @@
   font-size: 14px;
 }
 
-.tweet-timestamp {
-  display: block;
-  float: left;
+.tweet header {
+  margin: 0;
+  background: rgba(0, 0, 0, 0.05);
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  align-items: flex-start;
 }
 
-.tweet-actions {
-  display: block;
-  float: right;
-  visibility: hidden;
+.tweet header:after,
+.tweet footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tweet:hover {
+  opacity: 1;
 }
 
 .tweet:hover .tweet-actions {
   visibility: visible;
 }
 
-.retweet, .like, .flag {
-  height: 20px;
+.tweet-timestamp {
+  flex-grow: 1;
 }
 
+.user-avatar {
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
 
+.user-handle {
+  line-height: 1.5rem;
+  font-size: 16px;
+}
+
+.user-name {
+  font-size: 24px;
+  font-weight: bold;
+  flex-grow: 1;
+}

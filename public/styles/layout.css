@@ -7,7 +7,7 @@ html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 a {
@@ -27,6 +27,14 @@ body {
   font-size: 16px;
 }
 
+.body-centering {
+  margin: auto;
+}
+
+.error {
+  color: red;
+}
+
 main {
   display: flex;
   align-items: center;
@@ -35,12 +43,4 @@ main {
   /* height: 1000px; */
   background-color: #FFFFFF;
   padding-top: 100px;
-}
-
-.body-centering {
-  margin: auto;
-}
-
-.error {
-  color: red;
 }
