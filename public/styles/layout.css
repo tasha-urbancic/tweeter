@@ -27,10 +27,6 @@ body {
   font-size: 16px;
 }
 
-.centered {
-  margin: auto;
-}
-
 .error {
   color: red;
 }
@@ -53,11 +49,9 @@ body {
 
 
 main {
-  display: flex;
-  align-items: center;
   margin: auto;
   width: 450px;
-  /* height: 1000px; */
+  padding: 2em;
   background-color: #FFFFFF;
   padding-top: 100px;
 }

@@ -36,7 +36,9 @@ $(function() {
         .append(headerUsername)
         .append(headerHandle);
 
-      const tweetContentBody = $("<p>").text(tweetObject.content.text);
+      const tweetContentBody = $("<p>")
+        .text(tweetObject.content.text)
+        .addClass("tweet-auto-wrap");
 
       const tweetContent = $("<div>")
         .addClass("tweet-content")
@@ -102,9 +104,12 @@ $(function() {
     newTweetSubmit: function(event) {
       event.preventDefault();
       const tweetTextSerialized = $("form").serialize();
-      const tweetText = tweetTextSerialized.split('').slice(5).join('');
+      const tweetText = $("form textarea").val();
 
-      if (handlers.tweetNotEmpty(tweetText) && handlers.tweetNotTooLong(tweetText)) {
+      if (
+        handlers.tweetNotEmpty(tweetText) &&
+        handlers.tweetNotTooLong(tweetText)
+      ) {
         $.post("/tweets", tweetTextSerialized, handlers.reloadTweets);
       } else {
         alert("Tweet needs to be between 1 and 140 characters!");
@@ -119,23 +124,20 @@ $(function() {
       });
     },
     tweetNotEmpty: function(tweetText) {
-      console.log(tweetText);
       if (tweetText === "") {
         return false;
       } else if (tweetText === null) {
-        return false;
-      } else if (tweetText === 'text') {
         return false;
       } else {
         return true;
       }
     },
     tweetNotTooLong: function(tweetText) {
-      return (tweetText.split("").length <= 140);
+      return tweetText.split("").length <= 140;
     },
     toggleTweetBox: function() {
-      $("#container").slideToggle(150, function() {
-        $("#container")
+      $(".new-tweet").slideToggle(150, function() {
+        $(".new-tweet")
           .find("textarea")
           .select();
       });

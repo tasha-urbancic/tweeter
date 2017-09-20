@@ -3,7 +3,6 @@
 }
 
 .tweet {
-  margin: auto;
   margin-bottom: 25px;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.25);
@@ -15,14 +14,14 @@
   visibility: hidden;
 }
 
-#tweets-container {
-  /* margin: auto; */
+.tweet-auto-wrap {
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .tweet-content {
   padding: 1em 1em 1em 1em;
 }
-
 
 .tweet footer {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
@@ -33,17 +32,13 @@
 }
 
 .tweet footer > p {
-  margin: 0;
   font-size: 14px;
 }
 
 .tweet header {
-  margin: 0;
   background: rgba(0, 0, 0, 0.05);
-  width: 100%;
   padding: 1em;
   display: flex;
-  align-items: flex-start;
 }
 
 .tweet header:after,

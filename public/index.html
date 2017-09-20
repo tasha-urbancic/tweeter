@@ -1,97 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Meta Information -->
+    <meta Content-Type="application/x-www-form-urlencoded" charset="UTF-8">
+    <title>Tweeter - Home Page</title>
 
-<head>
-  <!-- Meta Information -->
-  <meta Content-Type="application/x-www-form-urlencoded" charset="UTF-8">
-  <title>Tweeter - Home Page</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <!-- Roberto Font Import -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300i,700i" rel="stylesheet">
 
-  <!-- Roberto Font Import -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300i,700i" rel="stylesheet">
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-  <!-- App CSS -->
-  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
-  <!-- Navbar CSS -->
-  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <!-- New Tweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-  <!-- New Tweet CSS -->
-  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <!-- All Tweets CSS -->
+    <link rel="stylesheet" href="/styles/all-tweets.css" type="text/css" />
 
-  <!-- All Tweets CSS -->
-  <link rel="stylesheet" href="/styles/all-tweets.css" type="text/css" />
+    <!-- External JS -->
+    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
-  <!-- External JS -->
-  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/app.js"></script>
 
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/app.js"></script>
+    <!-- Composer Character Counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-  <!-- Composer Character Counter JS -->
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <!-- Font Awesome -->
+    <script src=https://use.fontawesome.com/22ba363c8a.js></script>
 
-  <!-- Font Awesome -->
-  <script src=https://use.fontawesome.com/22ba363c8a.js></script>
+  </head>
+  <body>
 
-</head>
-
-<body>
-
-  <!-- Top nav bar (fixed) -->
-  <nav id="nav-bar">
-    <img class="logo" src="/images/bird.png">
-    <span class="header">Tweeter</span>
-    <div class='compose-button'>
-      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-      <p>Compose<p>
-    </div>
-  </nav>
-
-
-  <!-- Page-specific (main) content here -->
-  <main>
-
-    <div class="centered">
-
-      <div id="container">
-
-        <section class="new-tweet">
-          <header>
-            <h2>Compose Tweet</h2>
-          </header>
-
-          <form action="/tweets" method="POST">
-            <textarea name="text" placeholder="What are you humming about?"></textarea>
-            <footer>
-              <div class="tweet-button">
-                <input type="submit" name="Tweet" value="Tweet">
-              </div>
-              <div class="tweet-character-counter">
-                <span class="counter">140</span>
-              </div>
-            </footer>
-          </form>
-
-        </section>
-
+    <!-- Top nav bar (fixed) -->
+    <nav id="nav-bar">
+      <img class="logo" src="/images/bird.png">
+      <span class="header">Tweeter</span>
+      <div class='compose-button'>
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        <p>Compose
+          <p>
       </div>
+    </nav>
 
+
+    <!-- Page-specific (main) content here -->
+    <main>
+      <section class="new-tweet">
+        <header>
+          <h2>Compose Tweet</h2>
+        </header>
+        <form action="/tweets" method="POST">
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <footer>
+            <div class="tweet-button">
+              <input type="submit" name="Tweet" value="Tweet">
+            </div>
+            <div class="tweet-character-counter">
+              <span class="counter">140</span>
+            </div>
+          </footer>
+        </form>
+      </section>
       <div id="tweets-container">
-
       </div>
-
-    </div>
-
-  </main>
-
-
-
-</body>
-
-
-
-
+    </main>
+  </body>
 </html>
