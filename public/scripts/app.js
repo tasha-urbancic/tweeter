@@ -101,10 +101,11 @@ $(function() {
     },
     newTweetSubmit: function(event) {
       event.preventDefault();
-      const tweetText = $("form").serialize();
+      const tweetTextSerialized = $("form").serialize();
+      const tweetText = tweetTextSerialized.split('').slice(5).join('');
 
-      if (!handlers.tweetIsEmpty || !handlers.tweetTooLong) {
-        $.post("/tweets", tweetText, handlers.reloadTweets);
+      if (handlers.tweetNotEmpty(tweetText) && handlers.tweetNotTooLong(tweetText)) {
+        $.post("/tweets", tweetTextSerialized, handlers.reloadTweets);
       } else {
         alert("Tweet needs to be between 1 and 140 characters!");
       }
@@ -117,19 +118,20 @@ $(function() {
         success: handlers.renderTweets
       });
     },
-    tweetIsEmpty: function() {
-      if (tweetText !== "" || tweetText !== null) {
+    tweetNotEmpty: function(tweetText) {
+      console.log(tweetText);
+      if (tweetText === "") {
+        return false;
+      } else if (tweetText === null) {
+        return false;
+      } else if (tweetText === 'text') {
         return false;
       } else {
         return true;
       }
     },
-    tweetTooLong: function() {
-      if (tweetText.split("").length <= 140) {
-        return false;
-      } else {
-        return true;
-      }
+    tweetNotTooLong: function(tweetText) {
+      return (tweetText.split("").length <= 140);
     },
     toggleTweetBox: function() {
       $("#container").slideToggle(150, function() {
