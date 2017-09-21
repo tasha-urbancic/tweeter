@@ -158,8 +158,6 @@ $(function() {
     *
     * @param {event} object
     *
-    * Returns:
-    * @param {} string
     */
     newTweetSubmit: function(event) {
       event.preventDefault();
@@ -175,6 +173,10 @@ $(function() {
         alert("Tweet needs to be between 1 and 140 characters!");
       }
     },
+    /**
+    * Loads tweets asynchronusly using Ajax
+    * using a GET request to /tweets
+    */
     loadTweets: function() {
       $.ajax({
         url: "/tweets",
@@ -183,6 +185,12 @@ $(function() {
         success: createNewTweets.renderTweets
       });
     },
+    /**
+    * Checks that tweet is not empty
+    * Takes inputs:
+    *
+    * @param {tweetText} string
+    */
     tweetNotEmpty: function(tweetText) {
       if (tweetText === "") {
         return false;
@@ -192,9 +200,19 @@ $(function() {
         return true;
       }
     },
+    /**
+    * Checks that tweet is not too long
+    * Takes inputs:
+    *
+    * @param {tweetText} string
+    */
     tweetNotTooLong: function(tweetText) {
       return tweetText.split("").length <= 140;
     },
+    /**
+    * Animates the compose tweet box on click
+    * of the compose button.
+    */
     toggleTweetBox: function() {
       $(".new-tweet").slideToggle(150, function() {
         $(".new-tweet")
