@@ -6,12 +6,24 @@
 
 $(function() {
   const createNewTweets = {
+    /**
+    * Adds new tweet article to the index.html. 
+    * Takes inputs:
+    *
+    * @param {arrayOfTweets} object
+    */
     renderTweets: function(arrayOfTweets) {
       arrayOfTweets.forEach(tweetData => {
         const $tweet = createNewTweets.createTweetElement(tweetData);
         $("#tweets-container").prepend($tweet);
       });
     },
+    /**
+    * Creates a new tweet article for index.html. 
+    * Takes inputs:
+    *
+    * @param {tweetObject} object
+    */
     createTweetElement: function(tweetObject) {
       const article = $("<article>").addClass("tweet");
 
@@ -98,6 +110,15 @@ $(function() {
 
       return article;
     },
+    /**
+    * Turns timestamp into a since posted time.
+    * Takes inputs:
+    *
+    * @param {date} number
+    *
+    * Returns:
+    * @param {} string
+    */
     createDate: function(date) {
       var seconds = Math.floor((new Date() - date) / 1000);
       var interval = Math.floor(seconds / 31536000);
@@ -125,9 +146,21 @@ $(function() {
     }
   };
   const handlingTweets = {
+    /**
+    * Reloads tweets using loadTweets
+    */
     reloadTweets: function() {
       handlingTweets.loadTweets();
     },
+    /**
+    * Submits a new tweet as a POST.
+    * Takes inputs:
+    *
+    * @param {event} object
+    *
+    * Returns:
+    * @param {} string
+    */
     newTweetSubmit: function(event) {
       event.preventDefault();
       const tweetTextSerialized = $("form").serialize();
