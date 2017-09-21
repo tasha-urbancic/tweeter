@@ -214,11 +214,18 @@ $(function() {
           .find("textarea")
           .select();
       });
+    },
+    onTextEnter: function(event) {
+      if(event.which == 13) {
+        handlingTweets.newTweetSubmit(event);
+      }
     }
   };
+
 
   handlingTweets.toggleTweetBox();
   handlingTweets.loadTweets();
   $(".tweet-button input").on("click", handlingTweets.newTweetSubmit);
+  $(".new-tweet textarea").on('keypress', handlingTweets.onTextEnter);
   $(".compose-button").on("click", handlingTweets.toggleTweetBox);
 });
