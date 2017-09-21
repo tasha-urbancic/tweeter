@@ -163,6 +163,7 @@ $(function() {
         handlingTweets.tweetNotTooLong(tweetText)
       ) {
         $.post("/tweets", tweetTextSerialized, handlingTweets.reloadTweets);
+        $("form textarea").val('');
       } else {
         alert("Tweet needs to be between 1 and 140 characters!");
       }
