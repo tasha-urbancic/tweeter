@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(function() {
   const createNewTweets = {
     /**
@@ -222,6 +216,7 @@ $(function() {
     }
   };
 
+  handlingTweets.toggleTweetBox();
   handlingTweets.loadTweets();
   $(".tweet-button input").on("click", handlingTweets.newTweetSubmit);
   $(".compose-button").on("click", handlingTweets.toggleTweetBox);
