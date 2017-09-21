@@ -163,7 +163,7 @@ $(function() {
         handlingTweets.tweetNotTooLong(tweetText)
       ) {
         $.post("/tweets", tweetTextSerialized, handlingTweets.reloadTweets);
-        $("form textarea").val('');
+        $("form textarea").val("");
       } else {
         alert("Tweet needs to be between 1 and 140 characters!");
       }
@@ -216,16 +216,15 @@ $(function() {
       });
     },
     onTextEnter: function(event) {
-      if(event.which == 13) {
+      if (event.which === 13) {
         handlingTweets.newTweetSubmit(event);
       }
     }
   };
 
-
   handlingTweets.toggleTweetBox();
   handlingTweets.loadTweets();
   $(".tweet-button input").on("click", handlingTweets.newTweetSubmit);
-  $(".new-tweet textarea").on('keypress', handlingTweets.onTextEnter);
+  $(".new-tweet textarea").on("keypress", handlingTweets.onTextEnter);
   $(".compose-button").on("click", handlingTweets.toggleTweetBox);
 });
