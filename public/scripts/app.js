@@ -14,89 +14,114 @@ $(function() {
     },
     createTweetElement: function(tweetObject) {
       const article = $("<article>").addClass("tweet");
-  
+
       const avatarImage = $("<img>")
         .addClass("user-avatar")
         .attr("src", tweetObject.user.avatars.small)
         .attr("alt", tweetObject.user.name);
-  
+
       const headerImg = $("<a>")
         .attr("href", "#")
         .append(avatarImage);
-  
+
       const headerUsername = $("<a>")
         .attr("href", "#")
         .addClass("user-name")
         .text(tweetObject.user.name);
-  
+
       const headerHandle = $("<a>")
         .attr("href", "#")
         .addClass("user-handle")
         .text(tweetObject.user.handle);
-  
+
       const header = $("<header>")
         .append(headerImg)
         .append(headerUsername)
         .append(headerHandle);
-  
+
       const tweetContentBody = $("<p>")
         .text(tweetObject.content.text)
         .addClass("tweet-auto-wrap");
-  
+
       const tweetContent = $("<div>")
         .addClass("tweet-content")
         .append(tweetContentBody);
-  
+
       const timestamp = $("<div>")
         .addClass("tweet-timestamp")
         .append(
           $("<a>")
             .attr("href", "#")
-            .text(Date(tweetObject.created_at))
+            .text(createNewTweets.createDate(tweetObject.created_at))
         );
-  
+
       const likeImage = $("<img>")
         .addClass("like")
         .attr("src", "images/like.png")
         .attr("alt", "like");
-  
+
       const likeLink = $("<a>")
         .attr("href", "#")
         .append(likeImage);
-  
+
       const flagImage = $("<img>")
         .addClass("flag")
         .attr("src", "images/flag.png")
         .attr("alt", "flag");
-  
+
       const flagLink = $("<a>")
         .attr("href", "#")
         .append(flagImage);
-  
+
       const retweetImage = $("<img>")
         .addClass("retweet")
         .attr("src", "images/retweet.png")
         .attr("alt", "retweet");
-  
+
       const retweetLink = $("<a>")
         .attr("href", "#")
         .append(retweetImage);
-  
+
       const tweetActions = $("<div>")
         .addClass("tweet-actions")
         .append(likeLink)
         .append(flagLink)
         .append(retweetLink);
-  
+
       const footer = $("<footer>")
         .append(timestamp)
         .append(tweetActions);
-  
+
       article.append(header);
       article.append(tweetContent);
       article.append(footer);
-  
+
       return article;
+    },
+    createDate: function(date) {
+      var seconds = Math.floor((new Date() - date) / 1000);
+      var interval = Math.floor(seconds / 31536000);
+
+      if (interval > 1) {
+        return interval + " years";
+      }
+      interval = Math.floor(seconds / 2592000);
+      if (interval > 1) {
+        return interval + " months";
+      }
+      interval = Math.floor(seconds / 86400);
+      if (interval > 1) {
+        return interval + " days";
+      }
+      interval = Math.floor(seconds / 3600);
+      if (interval > 1) {
+        return interval + " hours";
+      }
+      interval = Math.floor(seconds / 60);
+      if (interval > 1) {
+        return interval + " minutes";
+      }
+      return Math.floor(seconds) + " seconds";
     }
   };
   const handlingTweets = {
@@ -150,4 +175,3 @@ $(function() {
   $(".tweet-button input").on("click", handlingTweets.newTweetSubmit);
   $(".compose-button").on("click", handlingTweets.toggleTweetBox);
 });
-
