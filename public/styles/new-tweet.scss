@@ -4,10 +4,21 @@
   padding-bottom: 23px;
 }
 
+.error {
+  color: red;
+}
+
 h2 {
   margin: 0;
   width: 370px;
   border-bottom: 1px solid lighten(black, 75);
+}
+
+input {
+  border-radius: $border-radius;
+  border: 1px solid lighten(black, 75);
+  padding: 0 5px;
+  background: $tweeter-color;
 }
 
 .new-tweet {
@@ -37,10 +48,6 @@ textarea {
 
 .tweet-button {
   flex-grow: 1;
-}
-
-.error {
-  color: red;
 }
 
 

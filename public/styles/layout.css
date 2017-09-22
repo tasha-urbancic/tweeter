@@ -34,7 +34,7 @@ main {
 
 #nav-bar .header {
   flex-grow: 1;
-  font-size: 28px;
+  font-size: 35px;
   padding-left: 10px; }
 
 #nav-bar .logo {
@@ -58,10 +58,19 @@ main {
 #container {
   padding-bottom: 23px; }
 
+.error {
+  color: red; }
+
 h2 {
   margin: 0;
   width: 370px;
   border-bottom: 1px solid #bfbfbf; }
+
+input {
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  padding: 0 5px;
+  background: #BBC; }
 
 .new-tweet {
   padding: 0 1em;
@@ -86,9 +95,6 @@ textarea {
 
 .tweet-button {
   flex-grow: 1; }
-
-.error {
-  color: red; }
 
 .like,
 .flag,
@@ -161,3 +167,45 @@ textarea {
   font-size: 21px;
   font-weight: bold;
   flex-grow: 1; }
+
+@media only screen and (max-device-width: 976px) {
+  main {
+    width: 100%; }
+  body {
+    font-size: 42px; }
+  #nav-bar .header {
+    font-size: 77px; }
+  h2 {
+    font-size: 49px;
+    width: 100%; }
+  .new-tweet {
+    margin-top: 170px;
+    margin-bottom: 30px; }
+  #tweets-container {
+    margin-top: 100px; }
+  .tweet footer {
+    font-size: 42px; }
+  .new-tweet footer {
+    font-size: 42px; }
+  .user-name {
+    font-size: 49px; }
+  .user-handle {
+    font-size: 42px; }
+  .tweet-auto-wrap {
+    margin: 12px; }
+  input {
+    border-radius: 20px;
+    border: 1px solid #bfbfbf;
+    padding: 0 15px;
+    background: #BBC; }
+  .compose-button {
+    border-radius: 20px; }
+  .compose-button i {
+    margin: 15px; }
+  .tweet {
+    opacity: 1; }
+  .tweet-actions {
+    visibility: visible; }
+  #nav-bar .logo {
+    width: 200px;
+    height: 180px; } }
