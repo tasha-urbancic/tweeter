@@ -1,7 +1,10 @@
 $sizing-unit: 7px;
-$tweeter-color: #00a087;
+$tweeter-color: #BBC;
 $tweeter-color-lighter: rgba(255, 255, 255, 0.86);
-$header-color: #e8fdff;
+$header-color: white;
+$tweet-background: lighten($tweeter-color, 15);
+$border-radius: 5px;
+
 
 // Global layout stuff
 @import "global";
