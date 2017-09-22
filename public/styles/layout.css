@@ -169,43 +169,43 @@ textarea {
   flex-grow: 1; }
 
 @media only screen and (max-device-width: 976px) {
-  main {
-    width: 100%; }
   body {
     font-size: 42px; }
-  #nav-bar .header {
-    font-size: 77px; }
+  .compose-button {
+    border-radius: 20px; }
+  .compose-button i {
+    margin: 15px; }
   h2 {
     font-size: 49px;
     width: 100%; }
-  .new-tweet {
-    margin-top: 170px;
-    margin-bottom: 30px; }
-  #tweets-container {
-    margin-top: 100px; }
-  .tweet footer {
-    font-size: 42px; }
-  .new-tweet footer {
-    font-size: 42px; }
-  .user-name {
-    font-size: 49px; }
-  .user-handle {
-    font-size: 42px; }
-  .tweet-auto-wrap {
-    margin: 12px; }
   input {
     border-radius: 20px;
     border: 1px solid #bfbfbf;
     padding: 0 15px;
     background: #BBC; }
-  .compose-button {
-    border-radius: 20px; }
-  .compose-button i {
-    margin: 15px; }
+  main {
+    width: 100%; }
+  #nav-bar .header {
+    font-size: 77px; }
+  #nav-bar .logo {
+    width: 200px;
+    height: 180px; }
+  .new-tweet {
+    margin-top: 170px;
+    margin-bottom: 30px; }
+  .new-tweet footer {
+    font-size: 42px; }
   .tweet {
     opacity: 1; }
   .tweet-actions {
     visibility: visible; }
-  #nav-bar .logo {
-    width: 200px;
-    height: 180px; } }
+  #tweets-container {
+    margin-top: 100px; }
+  .tweet footer {
+    font-size: 42px; }
+  .tweet-auto-wrap {
+    margin: 12px; }
+  .user-handle {
+    font-size: 42px; }
+  .user-name {
+    font-size: 49px; } }

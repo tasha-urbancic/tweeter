@@ -17,76 +17,7 @@ $border-radius: 5px;
 // All-Tweets
 @import "all-tweets";
 
-@media only screen and (max-device-width: 976px) {
-  main {
-    width: 100%;
-  }
-  body {
-    font-size: $sizing-unit * 6;
-  }
-
-  #nav-bar .header {
-    font-size: $sizing-unit * 11;
-  }
-
-  h2 {
-    font-size: $sizing-unit * 7;
-    width: 100%;
-  }
-  .new-tweet {
-    margin-top: 170px;
-    margin-bottom: 30px;
-  }
-
-  #tweets-container {
-    margin-top: 100px;
-  }
-
-  .tweet footer {
-    font-size: $sizing-unit * 6;
-  }
-
-  .new-tweet footer {
-    font-size: $sizing-unit * 6;
-  }
-
-  .user-name {
-    font-size: $sizing-unit * 7;
-  }
-  .user-handle {
-    font-size: $sizing-unit * 6;
-  }
-  .tweet-auto-wrap {
-    margin: 12px;
-  } 
-  input {
-    border-radius: $border-radius * 4;
-    border: 1px solid lighten(black, 75);
-    padding: 0 15px;
-    background: $tweeter-color;
-  }
-
-  .compose-button {
-    border-radius: $border-radius * 4;
-  }
-
-  .compose-button i {
-    margin: 15px;
-  }
-
-  .tweet {
-    opacity: 1;
-  }
-  
-  .tweet-actions {
-    visibility: visible;
-  }
-
-  #nav-bar .logo {
-    width: 200px;
-    height: 180px;
-  }
-
-}
+// Responsive Media
+@import "responsive-design";
 
 
