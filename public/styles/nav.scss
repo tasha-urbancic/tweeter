@@ -1,0 +1,37 @@
+
+#nav-bar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  padding: 0em 2em 0em;
+  width: 100%;
+  z-index: 1;
+  background: $tweeter-color;
+  color: $header-color
+}
+
+#nav-bar .header {
+  flex-grow: 1;
+  font-size:  $sizing-unit * 4;
+  padding-left: 10px;
+}
+
+#nav-bar .logo {
+  height: 80px;
+}
+
+.compose-button {
+  display: flex;
+  align-items: center;
+  background-color: $tweeter-color-lighter;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 0 0.5em 0;
+  color: #00a087;
+}
+
+.compose-button:hover {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}

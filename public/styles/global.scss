@@ -1,0 +1,27 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  color: #244751;
+  background-color: #eee;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: $sizing-unit * 2;
+}
+
+main {
+  margin: auto;
+  width: 450px;
+  padding: 2em;
+  background-color: #FFFFFF;
+  padding-top: 100px;
+}

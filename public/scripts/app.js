@@ -61,31 +61,31 @@ $(function() {
             .text(createNewTweets.createDate(tweetObject.created_at))
         );
 
-      const likeImage = $("<img>")
-        .addClass("like")
-        .attr("src", "images/like.png")
-        .attr("alt", "like");
-
+      const likeImage = $("<i>")
+        .addClass("fa fa-heart")
+        .attr("aria-hidden", "true");
+      
       const likeLink = $("<a>")
         .attr("href", "#")
+        .addClass('like')
         .append(likeImage);
 
-      const flagImage = $("<img>")
-        .addClass("flag")
-        .attr("src", "images/flag.png")
-        .attr("alt", "flag");
+      const flagImage = $("<i>")
+        .addClass("fa fa-flag")
+        .attr("aria-hidden", "true");
 
       const flagLink = $("<a>")
         .attr("href", "#")
+        .addClass('flag')
         .append(flagImage);
 
-      const retweetImage = $("<img>")
-        .addClass("retweet")
-        .attr("src", "images/retweet.png")
-        .attr("alt", "retweet");
+      const retweetImage = $("<i>")
+        .addClass("fa fa-retweet")
+        .attr("aria-hidden", "true");
 
       const retweetLink = $("<a>")
         .attr("href", "#")
+        .addClass('retweet')
         .append(retweetImage);
 
       const tweetActions = $("<div>")

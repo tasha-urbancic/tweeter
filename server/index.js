@@ -5,7 +5,12 @@
 const PORT = 8080;
 const express = require("express");
 const bodyParser = require("body-parser");
+const nodeSassMiddleware = require('node-sass-middleware');
 const app = express();
+
+app.use(nodeSassMiddleware({
+  src: `${__dirname}/../public`
+}));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
