@@ -17,7 +17,6 @@ module.exports = function makeDataHelpers(db) {
     */
     saveTweet: function(newTweet, callback) {
       db.collection("tweets").insertOne(newTweet);
-
       callback(null, true);
     },
     /**
@@ -26,8 +25,6 @@ module.exports = function makeDataHelpers(db) {
     *
     * @param {callback} function
     *
-    * It feeds the newly sorted tweets object 
-    * to the callback function.
     */
     getTweets: function(callback) {
       db
@@ -35,6 +32,21 @@ module.exports = function makeDataHelpers(db) {
         .find()
         .sort({ created_at: 1 })
         .toArray(callback);
+    },
+    /**
+    * likeTweets function looks to database for 
+    * the tweet that corresponds to the liked tweet
+    *
+    * @param {callback} function
+    *
+    */
+    likeTweet: function(id, callback) {
+      db.collection("tweets").update(
+        {_id: id},
+        {$inc: {"likeCount": 1}}
+      );
+
+      callback(null, true);
     }
   };
 };

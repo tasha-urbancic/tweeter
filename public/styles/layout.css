@@ -96,10 +96,20 @@ textarea {
 .tweet-button {
   flex-grow: 1; }
 
+.like:hover {
+  cursor: pointer; }
+
 .like,
 .flag,
 .retweet {
   padding: 0 2.5px; }
+
+.like {
+  display: flex;
+  align-items: center; }
+
+.likes-counter {
+  padding-left: 2px; }
 
 .retweet, .like, .flag {
   height: 20px; }
