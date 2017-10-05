@@ -24,7 +24,5 @@ This repository is the starter code for the project: Students will fork and clon
 ## Final Product
 
 ![“Tweeter”](https://github.com/tasha-urbancic/tweeter/blob/master/docs/tweeter-compose-tweet.gif?raw=true)
-!["Tweeter Mobile Version"](https://github.com/tasha-urbancic/tweeter/blob/master/docs/tweeter-compose-tweet-responsive.gif?raw=true)
-
 
 
