@@ -1,7 +1,7 @@
 # Tweeter Project
 
 Tweeter is a simple, single-page Twitter clone.
-See app here: [app-url](https://guarded-scrubland-24713.herokuapp.com/)
+See app here: https://guarded-scrubland-24713.herokuapp.com/
 
 ## Dependencies
 
